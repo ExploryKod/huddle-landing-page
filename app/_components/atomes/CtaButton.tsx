@@ -1,0 +1,19 @@
+"use client";
+
+import React from "react";
+
+export default function CtaButton({ children, variant = "primary" }: 
+    { children: React.ReactNode, variant: "primary" | "secondary" | "tertiary" }) {
+    const styles = "px-4 py-2 rounded-md font-medium transition-all";
+    const variants = {
+      primary: "bg-blue-500 text-white hover:bg-blue-600",
+      secondary: "bg-gray-500 text-white hover:bg-gray-600",
+      tertiary: "bg-red-500 text-white hover:bg-red-600",
+    };
+  
+    return (
+      <button className={`${styles} ${variants[variant]}`}>
+        {children}
+      </button>
+    );
+  }
