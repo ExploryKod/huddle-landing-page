@@ -1,5 +1,5 @@
 import React from "react";
 
-export function Section({ children }: { children: React.ReactNode }): React.ReactElement {
-  return <section className="section">{children}</section>;
+export function Section({ children, classNames }: { children: React.ReactNode, classNames?: string }): React.ReactElement {
+  return <section className={`section-container ${classNames}`}>{children}</section>;
 }

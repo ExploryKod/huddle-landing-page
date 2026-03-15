@@ -2,6 +2,7 @@ import { Poppins, Open_Sans } from "next/font/google";
 import "@/app/globals.css";
 import { ThemeProvider } from "@modules/app/react/ThemeProvider";
 import { Header } from "@modules/app/react/layout/Header";
+import { Footer } from "@modules/app/react/layout/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -38,9 +39,10 @@ export default function RootLayout({
     >
       <body className={openSans.className} suppressHydrationWarning>
         <ThemeProvider attribute="data-theme" defaultTheme="light" enableSystem={false}>
-          <div className="min-h-screen w-full mx-auto">
-            <Header className="header-max-w header-height header-space-x" />
+          <div className="relative min-h-screen w-full mx-auto">
+            <Header />
             {children}
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

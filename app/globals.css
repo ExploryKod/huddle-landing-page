@@ -10,9 +10,11 @@
   /* Layout (design sizes; test 320px to large screens for WCAG) */
   --width-mobile: 375px;
   --width-desktop: 1440px;
+  --header-height: 80px;
 
   /* Primary */
   --color-pink: hsl(322, 100%, 66%);
+  --color-pink-pale: hsl(322, 100%,80%);
 
   /* Neutral */
   --color-pale-cyan: hsl(193, 100%, 96%);
@@ -23,6 +25,7 @@
   --font-heading: var(--font-poppins, "Poppins", sans-serif);
   --font-body: var(--font-open-sans, "Open Sans", sans-serif);
   --font-size-body: 1.125rem; /* 18px */
+  --header-height: 100px;
 }
 
 @theme inline {
@@ -41,6 +44,7 @@
 
   /* Breakpoints → desktop:* variant (min-width 1440px) */
   --breakpoint-desktop: 90rem; /* 1440px */
+  --header-height: var(--header-height);
 
   /* Font weights (style guide: 400, 600, 700) – Tailwind defaults cover these as font-normal, font-semibold, font-bold */
 }
@@ -71,7 +75,7 @@ body {
   }
 
   .heading-card {
-    @apply font-heading font-semibold text-dark-cyan text-xl;
+    @apply font-heading font-bold text-dark-cyan text-2xl;
   }
 
   /* Body copy – Open Sans 400, Grayish Blue, 18px */
@@ -106,8 +110,25 @@ body {
 
   /* Footer block – dark cyan background, white text */
   .footer-block {
-    @apply bg-dark-cyan text-white;
+    @apply bg-dark-cyan text-white pt-0 pb-10;
   }
+
+  /* Header height – use var(--header-height) for layout/positioning */
+  .header-height {
+    min-height: var(--header-height);
+  }
+}
+
+.section-container, .header-container, .footer-container {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4;
+}
+
+.section-container-fluid {
+  @apply w-full mx-auto px-4 sm:px-6 lg:px-8 py-4;
+}
+
+.hero-banner {
+  @apply bg-pale-cyan ;
 }
 
 /** Image Container */
