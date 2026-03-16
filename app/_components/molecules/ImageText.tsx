@@ -10,8 +10,8 @@ export default function ImageText({ imageUrl, title, description, imagePosition 
                 <Image src={imageUrl} alt={title} width={600} height={400} className="w-full h-full object-cover object-center" />
             </ImageContainer>
             <div className="content flex flex-col gap-4 max-w-[500px]">
-                <h2 className="heading-card">{title}</h2>
-                <p className="body-copy">{description}</p>
+                <h2 className="title">{title}</h2>
+                <p className="paragraph text-grayish-blue">{description}</p>
             </div>
         </article>
     );

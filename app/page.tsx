@@ -31,7 +31,7 @@ export default function Home() {
       >
         {/* Overflow ~25% of card into footer; 75% stays above the line */}
         <div className="mb-12">
-          <CtaCard title="Ready To Build Your Community?" description="Get Started For Free" buttonText="Get Started For Free" />
+          <CtaCard title="Ready To Build Your Community?" description="" buttonText="Get Started For Free" />
         </div>
       </section>
     </div>

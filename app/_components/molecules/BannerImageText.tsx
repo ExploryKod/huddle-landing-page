@@ -12,10 +12,10 @@ export default function BannerImageText({ imageUrl, title, subtitle, description
             <div className="content flex flex-col gap-y-5 md:pt-10">
                 <div className="flex flex-col gap-y-5">
                     <div>
-                        <h1 className="heading-card text-center md:text-left">{title} <br /> {subtitle}</h1>
+                        <h1 className="main-title text-center md:text-left">{title} <br /> {subtitle}</h1>
                     </div>
                
-                    <p className="body-copy text-center md:text-left">{description}</p>
+                    <p className="text-paragraph text-center md:text-left">{description}</p>
                 </div> 
                 <div className="flex items-center justify-center md:justify-start">
                     <CtaButton variant="primary">Get Started For Free</CtaButton>

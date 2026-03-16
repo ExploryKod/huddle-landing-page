@@ -10,7 +10,6 @@
   /* Layout (design sizes; test 320px to large screens for WCAG) */
   --width-mobile: 375px;
   --width-desktop: 1440px;
-  --header-height: 80px;
 
   /* Primary */
   --color-pink: hsl(322, 100%, 66%);
@@ -26,6 +25,11 @@
   --font-body: var(--font-open-sans, "Open Sans", sans-serif);
   --font-size-body: 1.125rem; /* 18px */
   --header-height: 100px;
+
+  /* Font sizes */
+  --heading-1: 2.5rem;
+  --heading-2: 2rem;
+  --paragraph: 1.125rem;
 }
 
 @theme inline {
@@ -38,6 +42,9 @@
   /* Font families → font-heading, font-body */
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
+  --text-heading-1: var(--heading-1);
+  --text-heading-2: var(--heading-2);
+  --text-paragraph: var(--paragraph);
 
   /* Body font size → text-body */
   --text-body: var(--font-size-body);
@@ -55,57 +62,54 @@
    Base
    ----------------------------------------------------------------------------- */
 body {
-  @apply font-body text-body text-dark-cyan bg-pale-cyan;
+  @apply font-body text-paragraph text-dark-cyan bg-pale-cyan;
 }
+
+/* ------------------ Typography------------------ */
+.main-title {
+  @apply text-heading-1 font-heading font-bold;
+}
+
+.title {
+  @apply text-heading-2 font-heading font-bold;
+}
+
+.paragraph {
+  @apply text-paragraph font-body;
+}
+
 
 /* -----------------------------------------------------------------------------
    Components – consistent patterns (use these classes in the app)
    ----------------------------------------------------------------------------- */
 @layer components {
-  /* Headings – Poppins 600, Very Dark Cyan */
-  .heading-hero {
-    @apply font-heading font-semibold text-dark-cyan;
-    font-size: clamp(2rem, 5vw, 2.75rem);
-    line-height: 1.2;
-  }
-
-  .heading-section {
-    @apply font-heading font-semibold text-dark-cyan;
-    font-size: clamp(1.5rem, 4vw, 2rem);
-  }
-
-  .heading-card {
-    @apply font-heading font-bold text-dark-cyan text-2xl;
-  }
-
-  /* Body copy – Open Sans 400, Grayish Blue, 18px */
-  .body-copy {
-    @apply font-body text-body text-grayish-blue;
+  /* Common styles for all buttons */
+  .btn-common-styles {
+    @apply text-base font-bold font-body transition-all duration-300 motion-reduce:duration-0 ease-in-out;
   }
 
   /* Primary CTA – pink background, white text, rounded */
   .btn-primary {
-    @apply font-body font-bold text-white bg-pink rounded-full shadow-md;
-    @apply px-8 py-4 text-body;
-    @apply transition-colors duration-200;
+    @apply rounded-full shadow-md cursor-pointer;
+    @apply px-15 py-6 bg-pink text-white opacity-100;
   }
   .btn-primary:hover {
-    @apply opacity-90;
+    @apply opacity-60;
+  }
+  .btn-primary:focus-visible {
+    @apply ring-2 ring-offset-2 ring-pink outline-none;
   }
 
-  /* Secondary / outline – white bg, border, dark text (e.g. "Try It Free") */
+  /* Secondary CTA – white bg, no colored border, dark text */
   .btn-secondary {
-    @apply font-body font-semibold text-dark-cyan bg-white border-2 border-pink rounded-full;
-    @apply px-6 py-3 text-body;
-    @apply transition-colors duration-200;
+    @apply bg-white border border-transparent rounded-full shadow-sm cursor-pointer;
+    @apply px-15 py-6 text-black;
   }
   .btn-secondary:hover {
-    @apply text-pink;
+    @apply text-grayish-blue;
   }
-
-  /* Feature / CTA cards – white, rounded, shadow */
-  .card {
-    @apply bg-white rounded-2xl shadow-xl p-8 desktop:p-12;
+  .btn-secondary:focus-visible {
+    @apply ring-2 ring-offset-2 ring-grayish-blue outline-none;
   }
 
   /* Footer block – dark cyan background, white text */
@@ -133,18 +137,16 @@ body {
 
 /** Image Container */
 
-.image-contain img {
+.image-container img {
   object-fit: contain;   
   aspect-ratio: 1;
 }
 
 .image-container.image-cover img {
   object-fit: cover;   
-  aspect-ratio: 1;
 }
 
 
 .image-container.image-fill img {
   object-fit: fill;   
-  aspect-ratio: 1;
 }
