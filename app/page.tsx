@@ -8,19 +8,19 @@ export default function Home() {
     <main className="flex min-h-screen w-full flex-col">
             <HeroBanner />
     <div className="pt-16 flex flex-col gap-4 bg-white">
-      <Section>
+      <Section classNames="">
         <ImageText imageUrl="/illustrations/illustration-flowing-conversation.svg"
           title="Flowing Conversations"
           description="You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow."
           imagePosition="right" />
       </Section>
-      <Section>
+      <Section classNames="">
         <ImageText imageUrl="/illustrations/illustration-your-users.svg"
           title="Your Users"
           description="It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately."
           imagePosition="left" />
       </Section>
-      <Section>
+      <Section classNames="">
         <ImageText imageUrl="/illustrations/illustration-grow-together.svg"
           title="Grow Together"
           description="Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form."

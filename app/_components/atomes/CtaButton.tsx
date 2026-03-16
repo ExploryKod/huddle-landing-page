@@ -12,7 +12,7 @@ export default function CtaButton({ children, variant = "primary" }:
     };
   
     return (
-      <button className={`${styles} ${variants[variant]}`}>
+      <button type="button" className={`${styles} ${variants[variant]}`}>
         {children}
       </button>
     );

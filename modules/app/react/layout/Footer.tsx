@@ -27,7 +27,7 @@ export const Footer = () => {
                     </div>
 
                     <div className="footer-nav">
-                        <nav className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-10">
+                        <nav className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-10"   aria-label="Footer Navigation bar">
                             <ul className="flex flex-col gap-5">
                                 <li><Link href="#" className="text-white hover:underline focus:underline active:underline">About Us</Link></li>
                                 <li><Link href="#" className="text-white hover:underline focus:underline active:underline">What We Do</Link></li>

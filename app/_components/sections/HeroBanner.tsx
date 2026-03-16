@@ -4,8 +4,14 @@ import BannerImageText from "@components/molecules/BannerImageText";
 export default function HeroBanner() {
     return (
         <>
-            <Image src="/background/bg-hero-desktop.svg" alt="Huddle" width={100} height={100} 
-            className="absolute -top-(--header-height) left-0 image-cover w-full -z-10" />
+            <Image
+                src="/background/bg-hero-desktop.svg"
+                alt=""
+                aria-hidden
+                width={100}
+                height={100}
+                className="absolute -top-(--header-height) left-0 image-cover w-full -z-10"
+            />
             <div className="section-container flex flex-col items-center justify-center">
                 <BannerImageText imageUrl="/illustrations/illustration-mockups.svg" 
                 title="Build The Community" 
