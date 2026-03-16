@@ -8,7 +8,7 @@ export const Footer = () => {
                     <Image src="/logo-light.svg" alt="Huddle" width={200} height={100} className="font-bold text-white h-auto"/>
                 </div>
 
-                <div className="footer-middle flex flex-col gap-20 md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3">
+                <div className="footer-middle flex flex-col gap-20 md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-[1fr_400px_1fr]">
                     <div className="footer-text flex flex-col gap-10">
                         <ul className="flex flex-col gap-5">
                             <li className="flex items-start gap-5">
@@ -26,7 +26,7 @@ export const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="footer-nav">
+                    <div className="footer-nav flex flex-col lg:flex-row gap-y-0 lg:justify-center">
                         <nav className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-10"   aria-label="Footer Navigation bar">
                             <ul className="flex flex-col gap-5">
                                 <li><Link href="#" className="text-white hover:underline focus:underline active:underline">About Us</Link></li>
@@ -65,7 +65,7 @@ export const Footer = () => {
                             </ul>
                         </div>
                         <div className="w-full flex flex-col items-center justify-center">
-                            <p className="ml-0 pl-0text-sm flex flex-wrap gap-x-2">
+                            <p className="ml-0 pl-0 text-sm flex flex-wrap gap-x-2 md:min-w-full text-center lg:text-left">
                                 <span>&copy; Copyright 2018 Huddle. </span><span>All rights reserved.</span>
                             </p>
                         </div>

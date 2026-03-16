@@ -10,7 +10,7 @@ export const Header: React.FC<{ className?: string }> = ({ className = "" }) => 
       aria-label="Header Navigation bar"
     >
       <div className="flex items-center gap-4">
-        <Image src="/logo.svg" alt="Huddle" width={100} height={100} />
+        <Image src="/logo.svg" alt="Huddle" width={200} height={200} className="h-auto w-[150px] md:w-[200px]"/>
       </div>
       <div className="flex items-center gap-4">
         <CtaButton variant="secondary" >Try It Free</CtaButton>

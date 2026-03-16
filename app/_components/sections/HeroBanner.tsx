@@ -12,7 +12,7 @@ export default function HeroBanner() {
                 height={100}
                 className="absolute -top-(--header-height) left-0 image-cover w-full -z-10"
             />
-            <div className="section-container flex flex-col items-center justify-center">
+            <div className="section-container min-h-[calc(100vh-var(--header-height))] flex flex-col items-center justify-center">
                 <BannerImageText imageUrl="/illustrations/illustration-mockups.svg" 
                 title="Build The Community" 
                 subtitle="Your Fans Will Love"

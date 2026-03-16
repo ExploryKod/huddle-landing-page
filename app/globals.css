@@ -91,7 +91,7 @@ body {
   /* Primary CTA – pink background, white text, rounded */
   .btn-primary {
     @apply rounded-full shadow-md cursor-pointer;
-    @apply px-15 py-6 bg-pink text-white opacity-100;
+    @apply px-15 py-4 bg-pink text-white opacity-100;
   }
   .btn-primary:hover {
     @apply opacity-60;
@@ -103,7 +103,7 @@ body {
   /* Secondary CTA – white bg, no colored border, dark text */
   .btn-secondary {
     @apply bg-white border border-transparent rounded-full shadow-sm cursor-pointer;
-    @apply px-15 py-6 text-black;
+    @apply px-15 py-3 text-black;
   }
   .btn-secondary:hover {
     @apply text-grayish-blue;
