@@ -120,7 +120,7 @@ body {
 }
 
 .section-container, .header-container, .footer-container {
-  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4;
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4;
 }
 
 .section-container-fluid {
